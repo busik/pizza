@@ -28,6 +28,19 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'request' => [
+            'baseUrl' => '/'
+        ],
+        'urlManager' => [
+            'baseUrl' => '/',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                '<controller>/<action>/<id:\d+>/' => '<controller>/<action>',
+                '<controller>/<action>' => '<controller>/<action>',
+                '<controller>' => '<controller>/index',
+            ],
+        ],
     ],
     'params' => $params,
 ];

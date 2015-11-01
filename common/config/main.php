@@ -1,6 +1,11 @@
 <?php
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    'basePath' => dirname(__DIR__),
+
+    'language' => 'ru_RU',
+    'charset' => 'UTF-8',
+    'defaultRoute' => 'site/index',
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -19,6 +24,15 @@ return [
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
             'useFileTransport' => true,
+        ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                '<controller>/<action>/<id:\d+>/' => '<controller>/<action>',
+                '<controller>/<action>' => '<controller>/<action>',
+                '<controller>' => '<controller>/index',
+            ],
         ],
     ],
 ];

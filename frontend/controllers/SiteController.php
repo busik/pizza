@@ -76,6 +76,18 @@ class SiteController extends Controller
     }
 
     /**
+     * Displays search page.
+     *
+     * @return mixed
+     */
+    public function actionSearch($search = null)
+    {
+        return $this->render('search',[
+            'search'=>$search,
+        ]);
+    }
+
+    /**
      * Logs in a user.
      *
      * @return mixed

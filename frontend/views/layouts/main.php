@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use yii\widgets\ActiveForm;
 
 AppAsset::register($this);
 ?>
@@ -28,12 +29,41 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Pizza mania',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar navbar-fixed-top',
         ],
     ]);
+    ActiveForm::begin(
+        [
+            'action'=>['site/search'],
+            'method'=>'get',
+            'options'=>[
+                'class'=>'navbar-form navbar-left',
+            ],
+        ]
+    );
+    echo '<div class="input-group input-group-sm">';
+    echo Html::input(
+        'text: text',
+        'search',
+        '',
+        [
+            'placeholder'=>'Найти...',
+            'class'=>'form-control'
+        ]
+    );
+    echo '<span class="input-group-btn">';
+    echo Html::submitButton(
+        '<span class="glyphicon glyphicon-search">',
+        [
+            'class'=>'btn btn-success'
+        ]
+    );
+    echo '</span></div>';
+    ActiveForm::end();
+
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'About', 'url' => ['/site/about']],

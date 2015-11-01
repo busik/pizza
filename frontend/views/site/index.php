@@ -7,11 +7,16 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <p><a class="btn btn-lg btn-warning" href="http://www.yiiframework.com">Собрать пиццу</a></p>
+        <h1>Сделай выбор!</h1>
+        <img src="/frontend/web/images/2.jpg" alt="..." width="160" height="160" class="img-circle">
+        <img src="/frontend/web/images/3.jpg" alt="..." width="160" height="160" class="img-circle">
+        <img src="/frontend/web/images/6.jpg" alt="..." width="160" height="160" class="img-circle">
+        <img src="/frontend/web/images/5.jpg" alt="..." width="160" height="160" class="img-circle">
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+
     </div>
 
     <div class="body-content">

@@ -26,8 +26,21 @@ return [
                 ],
             ],
         ],
+        'request' => [
+            'baseUrl' => '/admin'
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
+        ],
+        'urlManager' => [
+            'baseUrl' => '/admin',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                '<controller>/<action>/<id:\d+>/' => '<controller>/<action>',
+                '<controller>/<action>' => '<controller>/<action>',
+                '<controller>' => '<controller>/index',
+            ],
         ],
     ],
     'params' => $params,

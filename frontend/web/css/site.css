@@ -1,6 +1,17 @@
 html,
 body {
     height: 100%;
+    background-image: url(../images/background-photo.jpg);
+    /* ÷ентрирование изображени€ по вертикали и горизонтали всегда */
+    background-position: center center;
+    /* «апрещаем повтор изображени€ */
+    background-repeat: no-repeat;
+    /* ‘иксируем изображение - оно остаетс€ на месте при прокрутке окна */
+    background-attachment: fixed;
+    /* »зображение будет масштабироватьс€ в зависимости от размеров контейнера */
+    background-size: cover;
+    /* ÷вет фона изображени€, который будет показыватьс€ пока изображение не загрузитс€ */
+    background-color:#464646;
 }
 
 .wrap {
